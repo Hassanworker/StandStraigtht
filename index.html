@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<input type="text" placeholder="당신의 키는?" size="40" id="myHeight">cm
+	<button id=but>계산하기</button>
+	<div id="output" style="width: 600px; height:600px; background: grey; color: black;
+	text-align: center; line-height: 50px;"> 표준체중과 그에 따른 일일 요구 열량 계산하기.</div>
+ 
+
+
+
+
+	<script type="text/javascript">
+		
+
+		but.onclick = function(){
+
+			var standardWeight = (myHeight.value - 100) * 0.9;
+			var lowActivity = (standardWeight) * 25;
+			var medActivity = (standardWeight) * 30;
+			var highActiviy = (standardWeight) * 35;
+			var finalOutput = "당신의 키는 " + myHeight.value +	"cm이고 표준 체중은 " + standardWeight+"kg입니다."
+			
+			+ "<br>신체 활동의 강도에 따라 요구되는 일일 열량은 <br>낮을 때 약 " + lowActivity+ "Kcal," + "<br> 보통일 때  약 "+ medActivity+ "kcal," + "<br> 높을 때 약 "+ highActiviy+"kcal입니다." ;
+			
+
+
+
+
+
+			console.log( finalOutput );
+
+
+
+
+
+			output.innerHTML = finalOutput;
+
+}
+
+
+	
+
+
+
+
+
+
+
+
+	</script>
+
+
+
+
+
+</body>
+</html>
